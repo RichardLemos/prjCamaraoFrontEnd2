@@ -8,7 +8,6 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { LoginPage } from '../pages/login/login';
 import { BemvindoPage } from '../pages/bemvindo/bemvindo';
 
 @NgModule({
@@ -17,7 +16,6 @@ import { BemvindoPage } from '../pages/bemvindo/bemvindo';
     HomePage,
     ListPage,
     BemvindoPage,
-    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +27,6 @@ import { BemvindoPage } from '../pages/bemvindo/bemvindo';
     HomePage,
     ListPage,
     BemvindoPage,
-    LoginPage
   ],
   providers: [
     StatusBar,

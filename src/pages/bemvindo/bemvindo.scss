@@ -22,9 +22,10 @@ page-bemvindo {
         margin-top: 20px;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 15px;
+        font-weight: bold;
     }
-
-    .botaoLogin {
+    
+    .botaoEntrar {
         margin: 0 auto;
         padding: 15px 20px;
         border: 1px solid #eee;
@@ -32,7 +33,23 @@ page-bemvindo {
         margin-top: 30px;
         width: 90px;
     }
-    
-    
-    
+
+    .navbarLogo {
+        height: 40px;
+        float: right;
+        margin-right: 10px;
+    }
+
+    .caixa {
+        background-color: #f2bc32;
+        font-size: 18px;
+    }
+
+    .user {
+        font-weight: bold;
+    }
+
+    .password {
+        font-weight: bold;
+    }
 }

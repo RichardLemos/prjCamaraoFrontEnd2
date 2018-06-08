@@ -1,10 +1,25 @@
 <ion-content padding id="welcome">
-  <div class="centralizado"><img class="foto" src="assets/imgs/camarao.png"></div>
+  <div class="centralizado">
+    <img class="foto" src="assets/imgs/camarao.png">
+  </div>
   <h1 class="bemVindo">Bem vindo ao King Shrimp</h1>
   <div class="posicao">
     <p>Aplicativo criado pelo grupo Potiguara!</p>
   </div>
 
-  <button ion-button block class="botaoLogin" (click)="login()">Login</button>
+  <ion-list>
 
+    <ion-item class="caixa">
+      <ion-label floating class="user">Usuário</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item class="caixa">
+      <ion-label floating class="password">Senha</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+    <button ion-button block class="botaoEntrar" (click)="home()">Entrar</button>
+
+  </ion-list>
 </ion-content>

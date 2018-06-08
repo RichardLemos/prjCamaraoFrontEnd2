@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { LoginPage } from '../login/login';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the BemvindoPage page.
@@ -23,8 +23,7 @@ export class BemvindoPage {
     console.log('ionViewDidLoad BemvindoPage');
   }
 
-  login() {
-    this.navCtrl.push(LoginPage);
+  home() {
+    this.navCtrl.push(HomePage);
   }
-
 }
