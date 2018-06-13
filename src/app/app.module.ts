@@ -4,18 +4,22 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { BemvindoPage } from '../pages/bemvindo/bemvindo';
+import { AlcalinidadePage } from '../pages/alcalinidade/alcalinidade';
+import { SalinidadePage } from '../pages/salinidade/salinidade';
+import { TemperaturaPage } from '../pages/temperatura/temperatura';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
     BemvindoPage,
+    AlcalinidadePage,
+    SalinidadePage,
+    TemperaturaPage
   ],
   imports: [
     BrowserModule,
@@ -25,8 +29,10 @@ import { BemvindoPage } from '../pages/bemvindo/bemvindo';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
     BemvindoPage,
+    AlcalinidadePage,
+    SalinidadePage,
+    TemperaturaPage
   ],
   providers: [
     StatusBar,
