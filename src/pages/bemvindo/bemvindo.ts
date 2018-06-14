@@ -1,13 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
-
-/**
- * Generated class for the BemvindoPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { ResetpasswordPage } from '../resetpassword/resetpassword';
+import { SignupPage } from '../signup/signup';
 
 @IonicPage()
 @Component({
@@ -25,5 +20,13 @@ export class BemvindoPage {
 
   home() {
     this.navCtrl.push(HomePage);
+  }
+
+  resetpassword() {
+    this.navCtrl.push(ResetpasswordPage);
+  }
+
+  criarConta() {
+    this.navCtrl.push(SignupPage);
   }
 }

@@ -6,14 +6,14 @@ page-bemvindo {
 
     .centralizado {
         width: 200px;
-        height: 200px;
+        height: 160px;
         margin: 30px auto;
     }
 
     .bemVindo {
         text-align: center;
-        font-size: 45px;
-        margin-top: 30px;
+        font-size: 40px;
+        margin-top: 10px;
         font-family: fantasy;
     }
 
@@ -32,6 +32,24 @@ page-bemvindo {
         font-size: 18px;
         margin-top: 30px;
         width: 90px;
+    }
+
+    .botaoResetPassword {
+        margin: 0 auto;
+        padding: 15px 20px;
+        border: 1px solid #eee;
+        font-size: 18px;
+        margin-top: 14px;
+        width: 200px;
+    }
+
+    .botaoCriarConta {
+        margin: 0 auto;
+        padding: 15px 20px;
+        border: 1px solid #eee;
+        font-size: 18px;
+        margin-top: 14px;
+        width: 120px;
     }
 
     .navbarLogo {

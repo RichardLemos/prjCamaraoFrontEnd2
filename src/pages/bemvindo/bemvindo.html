@@ -1,6 +1,6 @@
 <ion-content padding id="welcome">
   <div class="centralizado">
-    <img class="foto" src="assets/imgs/camarao.png">
+    <img src="assets/imgs/camarao.png">
   </div>
   <h1 class="bemVindo">Bem vindo ao King Shrimp</h1>
   <div class="posicao">
@@ -19,7 +19,12 @@
       <ion-input type="password"></ion-input>
     </ion-item>
 
-    <button ion-button block class="botaoEntrar" (click)="home()">Entrar</button>
-
   </ion-list>
+
+  <button ion-button block class="botaoEntrar" (click)="home()">Entrar</button>
+
+  <button ion-button block class="botaoResetPassword" (click)="resetpassword()">Esqueci minha senha</button>
+
+  <button ion-button block class="botaoCriarConta" (click)="criarConta()">Criar conta</button>
+
 </ion-content>
