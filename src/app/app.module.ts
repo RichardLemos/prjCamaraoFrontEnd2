@@ -18,6 +18,7 @@ import { TemperaturaPage } from '../pages/temperatura/temperatura';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { ResetpasswordPage } from '../pages/resetpassword/resetpassword';
 import { SignupPage } from '../pages/signup/signup';
+import { MedicoesPage } from '../pages/medicoes/medicoes';
 
 // Initialize Firebase
 var config = {
@@ -38,7 +39,8 @@ var config = {
     SalinidadePage,
     TemperaturaPage,
     ResetpasswordPage,
-    SignupPage
+    SignupPage,
+    MedicoesPage
   ],
   imports: [
     BrowserModule,
@@ -55,7 +57,8 @@ var config = {
     SalinidadePage,
     TemperaturaPage,
     ResetpasswordPage,
-    SignupPage
+    SignupPage,
+    MedicoesPage
   ],
   providers: [
     StatusBar,

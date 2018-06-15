@@ -15,7 +15,7 @@ import { ResetpasswordPage } from '../resetpassword/resetpassword';
 export class BemvindoPage {
   user: User = new User();
   @ViewChild('form') form: NgForm;
-
+  
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private authService: AuthServiceProvider, private alertCtrl: AlertController) {
   }

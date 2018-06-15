@@ -4,11 +4,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { AlcalinidadePage } from '../pages/alcalinidade/alcalinidade';
-import { SalinidadePage } from '../pages/salinidade/salinidade';
-import { TemperaturaPage } from '../pages/temperatura/temperatura';
 import { BemvindoPage } from '../pages/bemvindo/bemvindo';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { MedicoesPage } from '../pages/medicoes/medicoes';
 
 @Component({
   templateUrl: 'app.html'
@@ -37,9 +35,7 @@ export class MyApp {
     // Menu
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'Alcalinidade', component: AlcalinidadePage },
-      { title: 'Salinidade', component: SalinidadePage },
-      { title: 'Temperatura', component: TemperaturaPage }
+      { title: 'Medições', component: MedicoesPage },
     ];
 
   }
