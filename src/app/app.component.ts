@@ -8,6 +8,7 @@ import { AlcalinidadePage } from '../pages/alcalinidade/alcalinidade';
 import { SalinidadePage } from '../pages/salinidade/salinidade';
 import { TemperaturaPage } from '../pages/temperatura/temperatura';
 import { BemvindoPage } from '../pages/bemvindo/bemvindo';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 @Component({
   templateUrl: 'app.html'
@@ -19,8 +20,19 @@ export class MyApp {
 
   pages: Array<{ title: string, component: any }>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, 
+  afAuth: AngularFireAuth) {
     this.initializeApp();
+
+    const authObserver = afAuth.authState.subscribe(user => {
+      if (user) {
+        this.rootPage = HomePage;
+        authObserver.unsubscribe();
+      } else {
+        this.rootPage = BemvindoPage;
+        authObserver.unsubscribe();
+      }
+    })
 
     // Menu
     this.pages = [
