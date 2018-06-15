@@ -1,8 +1,9 @@
 <ion-content padding id="welcome">
-  <div class="centralizado">
-    <img src="assets/imgs/camarao.png">
-  </div>
+
+  <img src="assets/imgs/camarao.png">
+
   <h1 class="bemVindo">Bem vindo ao King Shrimp</h1>
+
   <div class="posicao">
     <p>Aplicativo criado pelo grupo Potiguara!</p>
   </div>
@@ -31,8 +32,8 @@
 
   <button ion-button block class="botaoEntrar" (click)="signIn()">Entrar</button>
 
-  <a (click)="resetPassword()">Esqueci minha senha</a>
+  <a class="EsqueciSenha" (click)="resetPassword()">Esqueci minha senha</a><br>
 
-  <a (click)="createAccount()">Criar conta</a>
+  <br><a class="CriarConta" (click)="createAccount()">Criar conta</a>
 
 </ion-content>

@@ -1,19 +1,24 @@
 page-bemvindo {
 
-    #welcome {
-        background-color: #f2bc32;
+    body{
+        padding: auto;
     }
 
-    .centralizado {
+    #welcome {
+        background: radial-gradient( white, #f2bc32);
+    }
+
+    img{
         width: 200px;
-        height: 160px;
-        margin: 30px auto;
+        margin: auto;
+        display: block;
+        padding: 10px;
     }
 
     .bemVindo {
         text-align: center;
-        font-size: 40px;
-        margin-top: 10px;
+        font-size: 30px;
+        margin-top: 2px;
         font-family: fantasy;
     }
 
@@ -68,6 +73,24 @@ page-bemvindo {
     }
 
     .password {
+        font-weight: bold;
+    }
+
+    .EsqueciSenha{
+        text-align: center;
+        margin-top: 15px; 
+        position: absolute;
+        left: 100px;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    .CriarConta {
+        text-align: center;
+        margin-top: 7px; 
+        position: absolute;
+        left: 140px;
+        font-size: 17px;
         font-weight: bold;
     }
 }

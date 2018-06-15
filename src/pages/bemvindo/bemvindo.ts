@@ -54,7 +54,6 @@ export class BemvindoPage {
     }
 
   }
-
   showAlert() {
     const alert = this.alertCtrl.create({
       buttons: ['OK']

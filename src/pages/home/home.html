@@ -4,14 +4,37 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Home</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
+
 </ion-header>
 
 <ion-content padding>
-  <p>Esse app é destinado ao trabalho Camarão da matéria de Tópicos de Programação,
-     desenvolvido pelo grupo Potiguara
+  <p class="textoHome">Esse app é destinado ao trabalho Camarão da matéria de Tópicos de Programação, desenvolvido pelo grupo Potiguara.
   </p>
 
-  <button ion-button block color="primary" (click)="signOut()">Sair</button>
+  <p class="textoHome">
+    <br>Membros do grupo:
+    <br>
+    <br>Richard Oliveira
+    <br>
+    <br>Leandro Verdun
+    <br>
+    <br>Jardel Lima
+    <br>
+    <br>Júlio César
+    <br>
+  </p>
+
+  <div class="centralizadoHome">
+    <img src="assets/imgs/camarao.png">
+  </div>
+
+  <button ion-button icon-only round block color="primary" class="sair" (click)="signOut()">Sair</button>
 
 </ion-content>
