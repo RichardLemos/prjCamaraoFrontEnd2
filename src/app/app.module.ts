@@ -17,7 +17,6 @@ import { SalinidadePage } from '../pages/salinidade/salinidade';
 import { TemperaturaPage } from '../pages/temperatura/temperatura';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { ResetpasswordPage } from '../pages/resetpassword/resetpassword';
-import { SigninPage } from '../pages/signin/signin';
 import { SignupPage } from '../pages/signup/signup';
 
 // Initialize Firebase
@@ -39,7 +38,6 @@ var config = {
     SalinidadePage,
     TemperaturaPage,
     ResetpasswordPage,
-    SigninPage,
     SignupPage
   ],
   imports: [
@@ -57,7 +55,6 @@ var config = {
     SalinidadePage,
     TemperaturaPage,
     ResetpasswordPage,
-    SigninPage,
     SignupPage
   ],
   providers: [
