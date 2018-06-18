@@ -12,13 +12,10 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { BemvindoPage } from '../pages/bemvindo/bemvindo';
-import { AlcalinidadePage } from '../pages/alcalinidade/alcalinidade';
-import { SalinidadePage } from '../pages/salinidade/salinidade';
-import { TemperaturaPage } from '../pages/temperatura/temperatura';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { ResetpasswordPage } from '../pages/resetpassword/resetpassword';
 import { SignupPage } from '../pages/signup/signup';
-import { MedicoesPage } from '../pages/medicoes/medicoes';
+import { TanquesPage } from '../pages/tanques/tanques';
 
 // Initialize Firebase
 var config = {
@@ -35,31 +32,28 @@ var config = {
     MyApp,
     HomePage,
     BemvindoPage,
-    AlcalinidadePage,
-    SalinidadePage,
-    TemperaturaPage,
     ResetpasswordPage,
     SignupPage,
-    MedicoesPage
+    TanquesPage
   ],
+  
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(config),
     AngularFireAuthModule
   ],
+
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
     BemvindoPage,
-    AlcalinidadePage,
-    SalinidadePage,
-    TemperaturaPage,
     ResetpasswordPage,
     SignupPage,
-    MedicoesPage
+    TanquesPage,
   ],
+
   providers: [
     StatusBar,
     SplashScreen,

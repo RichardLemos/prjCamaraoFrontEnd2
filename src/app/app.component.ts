@@ -6,7 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { BemvindoPage } from '../pages/bemvindo/bemvindo';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { MedicoesPage } from '../pages/medicoes/medicoes';
+import { TanquesPage } from '../pages/tanques/tanques';
 
 @Component({
   templateUrl: 'app.html'
@@ -35,7 +35,7 @@ export class MyApp {
     // Menu
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'Medições', component: MedicoesPage },
+      { title: 'Tanques', component: TanquesPage },
     ];
 
   }
