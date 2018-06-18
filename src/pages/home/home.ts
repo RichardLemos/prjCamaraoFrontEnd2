@@ -16,7 +16,7 @@ export class HomePage {
      signOut() {
         this.authService.signOut()
           .then(() => {
-            this.navCtrl.setRoot(BemvindoPage);
+            this.navCtrl.push(BemvindoPage); // Aqui
           })
           .catch((error) => {    
             console.error(error);

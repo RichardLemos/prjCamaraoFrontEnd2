@@ -1,11 +1,15 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 import { Chart } from 'chart.js';
+import { SensorProvider } from '../../providers/sensor/sensor';
 
 @IonicPage()
 @Component({
   selector: 'page-medicoes',
   templateUrl: 'medicoes.html',
+  providers: [
+    SensorProvider
+  ]
 })
 export class MedicoesPage {
 
@@ -15,12 +19,14 @@ export class MedicoesPage {
     }, 1500);
   }
 
+  public sensor: any;
+
   //alcalinidade
   @ViewChild('barCanvasAlc') barCanvasAlc;
   barChartAlc: any;
   fraca: number;
-  media: number;
-  forte: number;
+  //media: number;
+  //forte: number;
   pAlcVez: boolean = true;
 
   //ph
@@ -50,7 +56,8 @@ export class MedicoesPage {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    public menu: MenuController
+    public menu: MenuController,
+    private sensorProvider: SensorProvider
     ) {
   }
 
@@ -63,15 +70,23 @@ export class MedicoesPage {
     this.redenrizarChartPh()
     this.redenrizarChartNivel()
     this.redenrizarChartTemp()
+    this.sensorProvider.getLatestSensor().subscribe(
+      data => {
+        this.sensor = data;
+        console.log(data);
+      }, error => {
+        console.log(error);
+      }
+    )
   }
 
   //alcalinidade
   redenrizarChartAlc() {
 
     setTimeout(() => {
-      this.fraca = 1 + 1;
-      this.media = 4 + 1;
-      this.forte = 10 + 1;
+      this.fraca = this.sensor.alcalinidadeDoce;
+    //  this.media = 4 + 1;
+      //this.forte = 10 + 1;
       this.barChartAlc = new Chart(this.barCanvasAlc.nativeElement, {
 
         type: 'bar',
@@ -79,7 +94,7 @@ export class MedicoesPage {
           labels: ["Fraca", "Média", "Forte"],
           datasets: [{
             label: 'Neutralização',
-            data: [this.fraca, this.media, this.forte],
+            data: [this.fraca], // this.media, this.forte
             backgroundColor: [
               'rgba(2, 9, 132, 0.2)',
               'rgba(54, 162, 135, 0.2)',
@@ -99,15 +114,23 @@ export class MedicoesPage {
             borderWidth: 1
           }]
         },
+
         options: {
-          scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero: true
-              }
-            }]
-          }
-        }
+
+          legend: {
+                display: true,
+                labels: {
+                  fontColor: 'rgb(255, 99, 132)'
+                }
+              },
+                    scales: {
+                      yAxes: [{
+                        ticks: {
+                          beginAtZero: true
+                        }
+                      }]
+                    }
+                  }
 
       });
       this.redenrizarChartAlc()

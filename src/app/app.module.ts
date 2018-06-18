@@ -9,6 +9,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { BemvindoPage } from '../pages/bemvindo/bemvindo';
@@ -16,6 +18,7 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { ResetpasswordPage } from '../pages/resetpassword/resetpassword';
 import { SignupPage } from '../pages/signup/signup';
 import { TanquesPage } from '../pages/tanques/tanques';
+import { SensorProvider } from '../providers/sensor/sensor';
 
 // Initialize Firebase
 var config = {
@@ -41,7 +44,9 @@ var config = {
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(config),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    HttpModule,
+    HttpClientModule
   ],
 
   bootstrap: [IonicApp],
@@ -58,7 +63,8 @@ var config = {
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    AuthServiceProvider
+    AuthServiceProvider,
+    SensorProvider
   ]
 })
 export class AppModule { }

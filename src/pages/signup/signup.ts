@@ -39,7 +39,7 @@ export class SignupPage {
 
           toast.present();
 
-          this.navCtrl.setRoot(HomePage);
+          this.navCtrl.push(HomePage); // Aqui
         })
 
         .catch((error: any) => {
