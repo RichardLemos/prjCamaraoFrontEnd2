@@ -66,18 +66,25 @@ export class MedicoesPage {
   }
 
   ionViewDidLoad() {
-    this.redenrizarChartAlc()
-    this.redenrizarChartPh()
-    this.redenrizarChartNivel()
-    this.redenrizarChartTemp()
-    this.sensorProvider.getLatestSensor().subscribe(
-      data => {
-        this.sensor = data;
-        console.log(data);
-      }, error => {
-        console.log(error);
-      }
-    )
+    this.obterProprieadades()
+  }
+  obterProprieadades(){
+    setTimeout(() => {
+      
+      this.sensorProvider.getLatestSensor().subscribe(
+        data => {
+          this.sensor = data as any;
+          this.redenrizarChartAlc()
+          this.redenrizarChartPh()
+          this.redenrizarChartNivel()
+          this.redenrizarChartTemp()
+         this.obterProprieadades()
+          console.log(data);
+        }, error => {
+          console.log(error);
+        }
+      )
+    }, 10000);
   }
 
   //alcalinidade
