@@ -19,6 +19,7 @@ import { ResetpasswordPage } from '../pages/resetpassword/resetpassword';
 import { SignupPage } from '../pages/signup/signup';
 import { TanquesPage } from '../pages/tanques/tanques';
 import { SensorProvider } from '../providers/sensor/sensor';
+import { desenvolvedoresPage } from '../pages/desenvolvedores/desenvolvedores';
 
 // Initialize Firebase
 var config = {
@@ -37,7 +38,8 @@ var config = {
     BemvindoPage,
     ResetpasswordPage,
     SignupPage,
-    TanquesPage
+    TanquesPage,
+    desenvolvedoresPage
   ],
   
   imports: [
@@ -57,6 +59,7 @@ var config = {
     ResetpasswordPage,
     SignupPage,
     TanquesPage,
+    desenvolvedoresPage
   ],
 
   providers: [

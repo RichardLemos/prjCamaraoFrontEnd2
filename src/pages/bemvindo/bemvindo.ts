@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, MenuController } from 'ionic-angular';
 import { NgForm } from '@angular/forms';
 import { User } from '../../providers/auth-service/user';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
@@ -15,13 +15,20 @@ import { ResetpasswordPage } from '../resetpassword/resetpassword';
 export class BemvindoPage {
   user: User = new User();
   @ViewChild('form') form: NgForm;
-  
-  constructor(public navCtrl: NavController, public navParams: NavParams,
-    private authService: AuthServiceProvider, private alertCtrl: AlertController) {
+
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams,
+    private authService: AuthServiceProvider,
+    private alertCtrl: AlertController,
+    public menu: MenuController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad BemvindoPage');
+  }
+
+  ionViewDidEnter() {
+    this.menu.swipeEnable(false);
   }
 
   createAccount() {

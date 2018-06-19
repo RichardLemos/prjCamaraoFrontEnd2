@@ -8,6 +8,7 @@ import { BemvindoPage } from '../pages/bemvindo/bemvindo';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { TanquesPage } from '../pages/tanques/tanques';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
+import { desenvolvedoresPage } from '../pages/desenvolvedores/desenvolvedores';
 
 @Component({
   templateUrl: 'app.html'
@@ -17,7 +18,7 @@ export class MyApp {
 
   rootPage: any = BemvindoPage;
 
-  pages: Array<{ title: string, component: any }>;
+  pages: Array<{ title: string, component: any, icon: any }>;
 
   constructor(
     public platform: Platform,
@@ -39,9 +40,10 @@ export class MyApp {
 
     // Menu
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Tanques', component: TanquesPage },
-      { title: 'Logout', component: '' },
+      { title: 'Home', component: HomePage, icon: 'home' },
+      { title: 'Desenvolvedores', component: desenvolvedoresPage, icon: 'people' },
+      { title: 'Tanques', component: TanquesPage, icon: 'list-box' },
+      { title: 'Logout', component: '', icon: 'exit' },
     ];
 
   }
