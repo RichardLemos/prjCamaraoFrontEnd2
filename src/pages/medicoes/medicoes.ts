@@ -20,6 +20,7 @@ export class MedicoesPage {
   }
 
   public sensor: any;
+  // public data: string = this.sensor.medicao;
 
   //alcalinidade
   @ViewChild('barCanvasAlc') barCanvasAlc;
@@ -138,7 +139,7 @@ export class MedicoesPage {
           this.redenrizarChartTemp()
           this.redenrizarChartSalini()
           this.redenrizarChartTranspa()
-          this.redenrizarChartAmonia()
+          this.redenrizarChartAmonia()  
           this.redenrizarChartDureza()
           this.redenrizarChartMateriaOrganica()
           this.redenrizarChartOxigenioDissolvido()
@@ -153,7 +154,8 @@ export class MedicoesPage {
         }
       )
     }, 10000);
-  }
+  } 
+
 
   //alcalinidade
   redenrizarChartAlc() {
@@ -356,7 +358,7 @@ export class MedicoesPage {
       data: {
         labels: ["Fundo", "Superfície"],
         datasets: [{
-          label: 'Graus Celsius',
+          label: 'Litro',
           data: [this.salinidadeFundo, this.salinidadeSuperficie],
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
@@ -402,7 +404,7 @@ export class MedicoesPage {
       data: {
         labels: ["Transparência"],
         datasets: [{
-          label: 'Graus Celsius',
+          label: 'cm',
           data: [this.transparencia],
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
@@ -448,7 +450,7 @@ export class MedicoesPage {
       data: {
         labels: ["Amônia Total"],
         datasets: [{
-          label: 'Graus Celsius',
+          label: 'mg/L',
           data: [this.amonia],
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
@@ -495,7 +497,7 @@ export class MedicoesPage {
       data: {
         labels: ["Dureza Doce", "Dureza Salobra"],
         datasets: [{
-          label: 'Graus Celsius',
+          label: 'HB',
           data: [this.durezaTotalDoce, this.durezaTotalSalobra],
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
@@ -541,7 +543,7 @@ export class MedicoesPage {
       data: {
         labels: ["Matéria Orgânica"],
         datasets: [{
-          label: 'Graus Celsius',
+          label: 'g KG',
           data: [this.materiaOrganica],
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
@@ -577,7 +579,7 @@ export class MedicoesPage {
 
   }
 
-  //materiaOrganica
+  //oxigenioDissolvido
   redenrizarChartOxigenioDissolvido() {
 
     this.oxigenioDissolvido = this.sensor.oxigenioDissolvido;
@@ -587,7 +589,7 @@ export class MedicoesPage {
       data: {
         labels: ["Oxigênio Dissolvido"],
         datasets: [{
-          label: 'Graus Celsius',
+          label: 'mg/L',
           data: [this.oxigenioDissolvido],
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
@@ -632,7 +634,7 @@ export class MedicoesPage {
       data: {
         labels: ["Nitrito doce", "Nitrito salobra"],
         datasets: [{
-          label: 'Graus Celsius',
+          label: 'mg/L',
           data: [this.nitritoDoce, this.nitritoSalobra],
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
@@ -677,7 +679,7 @@ export class MedicoesPage {
       data: {
         labels: ["Nitrato doce", "Nitrato salobra"],
         datasets: [{
-          label: 'Graus Celsius',
+          label: 'mg/L',
           data: [this.nitratoDoce, this.nitratoSalobra],
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
@@ -711,7 +713,7 @@ export class MedicoesPage {
     });
   }
 
-  //nitrato
+  //h2s
   redenrizarChartH2s() {
 
     this.h2s = this.sensor.h2s;
@@ -721,7 +723,7 @@ export class MedicoesPage {
       data: {
         labels: ["H2S"],
         datasets: [{
-          label: 'Graus Celsius',
+          label: 'mg/L',
           data: [this.h2s],
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
@@ -765,7 +767,7 @@ export class MedicoesPage {
       data: {
         labels: ["Silicato"],
         datasets: [{
-          label: 'Graus Celsius',
+          label: 'mg/L',
           data: [this.silicato],
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',

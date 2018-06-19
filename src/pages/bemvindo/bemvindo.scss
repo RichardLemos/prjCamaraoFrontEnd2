@@ -4,8 +4,8 @@ page-bemvindo {
         padding: auto;
     }
 
-    #welcome {
-        background: radial-gradient ( white );
+    .bemVindoCor {
+        background: radial-gradient( aqua, black);
     }
 
     img{
@@ -64,7 +64,7 @@ page-bemvindo {
     }
 
     .caixa {
-        background-color: #f2bc32;
+        background-color: #1a2a6c;
         font-size: 18px;
     }
 

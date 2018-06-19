@@ -1,5 +1,9 @@
 page-tanques {
 
+        .corTanques {
+            background: radial-gradient( aqua, black);
+        }
+        
         //toolbar title
         .toolbar-title-md {
             padding: 0 12px;
@@ -33,7 +37,7 @@ page-tanques {
                 width: 350px;
                 height: 200px;                                         
                 float: left;
-                margin-left: 2px;            
+                margin-left: 2px;       
             }
         }
      
