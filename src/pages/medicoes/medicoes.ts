@@ -26,6 +26,7 @@ export class MedicoesPage {
   @ViewChild('barCanvasAlc') barCanvasAlc;
   barChartAlc: any;
   aguaDoce: number;
+  aguaSalobra: number;
   pAlcVez: boolean = true;
 
   //ph
@@ -161,6 +162,7 @@ export class MedicoesPage {
   redenrizarChartAlc() {
 
     this.aguaDoce = this.sensor.alcalinidadeDoce;
+    this.aguaSalobra = this.sensor.alcalinidadeSalobra;
     this.barChartAlc = new Chart(this.barCanvasAlc.nativeElement, {
 
       type: 'bar',
@@ -168,7 +170,7 @@ export class MedicoesPage {
         labels: ["Água Doce", "Água Salobra"],
         datasets: [{
           label: 'Neutralização',
-          data: [this.aguaDoce],
+          data: [this.aguaDoce, this.aguaSalobra],
           backgroundColor: [
             'rgba(2, 9, 132, 0.2)',
             'rgba(54, 162, 135, 0.2)',
