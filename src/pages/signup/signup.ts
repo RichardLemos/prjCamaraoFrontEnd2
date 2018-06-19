@@ -30,7 +30,7 @@ export class SignupPage {
       let toast = this.toastCtrl.create({
         message: 'Usuário criado com sucesso.',
         duration: 3000,
-        position: 'bottom'
+        position: 'middle'
       });
 
       this.authService.createUser(this.user)

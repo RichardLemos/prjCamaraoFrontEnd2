@@ -22,7 +22,7 @@ export class ResetpasswordPage {
   resetPassword() {
     if (this.form.form.valid) {
 
-      let toast = this.toastCtrl.create({ duration: 3000, position: 'bottom' });
+      let toast = this.toastCtrl.create({ duration: 3000, position: 'middle' });
       this.authService.resetPassword(this.userEmail)
         .then(() => {
           toast.setMessage('Solicitação foi enviada para o seu e-mail.')
