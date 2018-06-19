@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { BemvindoPage } from '../pages/bemvindo/bemvindo';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { TanquesPage } from '../pages/tanques/tanques';
+import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 
 @Component({
   templateUrl: 'app.html'
@@ -18,8 +19,12 @@ export class MyApp {
 
   pages: Array<{ title: string, component: any }>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, 
-  afAuth: AngularFireAuth) {
+  constructor(
+    public platform: Platform,
+    public statusBar: StatusBar,
+    public splashScreen: SplashScreen,
+    afAuth: AngularFireAuth,
+    public authService: AuthServiceProvider) {
     this.initializeApp();
 
     const authObserver = afAuth.authState.subscribe(user => {
@@ -36,6 +41,7 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'Tanques', component: TanquesPage },
+      { title: 'Logout', component: '' },
     ];
 
   }
@@ -50,8 +56,21 @@ export class MyApp {
   }
 
   openPage(page) {
+    if (page.title === 'Logout') {
+      this.signOut()
+    } else {
+      this.nav.setRoot(page.component);
+    }
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
+  }
+  signOut() {
+    this.authService.signOut()
+      .then(() => {
+        this.nav.push(BemvindoPage);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   }
 }

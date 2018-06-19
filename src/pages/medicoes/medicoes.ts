@@ -90,7 +90,6 @@ export class MedicoesPage {
   //alcalinidade
   redenrizarChartAlc() {
 
-    setTimeout(() => {
       this.fraca = this.sensor.alcalinidadeDoce;
     //  this.media = 4 + 1;
       //this.forte = 10 + 1;
@@ -139,17 +138,13 @@ export class MedicoesPage {
                     }
                   }
 
-      });
-      this.redenrizarChartAlc()
-    }, this.pAlcVez ? 0 : 3000);
-    this.pAlcVez = false;
+      });    
 
   }
 
   //ph
   redenrizarChartPh() {
 
-    setTimeout(() => {
       this.acida = 1 + 1;
       this.neutra = 4 + 1;
       this.alcalina = 10 + 1;
@@ -190,17 +185,12 @@ export class MedicoesPage {
           }
         }
 
-      });
-      this.redenrizarChartPh()
-    }, this.pPhVez ? 0 : 3000);
-    this.pPhVez = false;
-
+      });   
   }
 
   //nivel
   redenrizarChartNivel() {
 
-    setTimeout(() => {
       this.superficie = 1 + 1;
       this.meio = 4 + 1;
       this.fundo = 10 + 1;
@@ -241,17 +231,13 @@ export class MedicoesPage {
           }
         }
 
-      });
-      this.redenrizarChartNivel()
-    }, this.pNivelVez ? 0 : 3000);
-    this.pNivelVez = false;
+      });     
 
   }
 
   //Temperatura
   redenrizarChartTemp() {
 
-    setTimeout(() => {
       this.temperaturaAmbiente = 1 + 1;
       this.temperaturaMedia = 4 + 1;
       this.temperaturaAlta = 10 + 1;
@@ -292,10 +278,8 @@ export class MedicoesPage {
           }
         }
 
-      });
-      this.redenrizarChartTemp()
-    }, this.pTempVez ? 0 : 3000);
-    this.pTempVez = false;
+      });      
+    
 
   }
 

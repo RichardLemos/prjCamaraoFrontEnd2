@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
-import { BemvindoPage } from '../bemvindo/bemvindo';
 
 @Component({
   selector: 'page-home',
@@ -10,16 +9,8 @@ import { BemvindoPage } from '../bemvindo/bemvindo';
 export class HomePage {
 
   constructor(public navCtrl: NavController,
-              public authService:AuthServiceProvider) {
+    public authService: AuthServiceProvider) {
 
   }
-     signOut() {
-        this.authService.signOut()
-          .then(() => {
-            this.navCtrl.push(BemvindoPage); // Aqui
-          })
-          .catch((error) => {    
-            console.error(error);
-        });
-      }
-    }
+
+}
