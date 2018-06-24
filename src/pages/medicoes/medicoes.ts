@@ -154,7 +154,7 @@ export class MedicoesPage {
           console.log(error);
         }
       )
-    }, 10000);
+    }, 5000);
   } 
 
 
